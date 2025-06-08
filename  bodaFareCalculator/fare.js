@@ -13,4 +13,10 @@ function calculateBodaFare(distanceInKm) {
 // Prompt user for distance in kilometers
 const distanceInput = prompt("Unafika wapi Mkubwa? Kilometer ngapi?:");
 const distanceInKm = parseFloat(distanceInput);
-calculateBodaFare(distanceInKm);
+
+if (!isNaN(distanceInKm) && distanceInKm >= 0) {
+  calculateBodaFare(distanceInKm);
+} else {
+  console.log("Tafadhali ingiza nambari halali ya kilomita.");
+}
+
